@@ -1,0 +1,68 @@
+ 
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+//result
+  <body>
+  <div class="container">
+  
+    <center>
+<h3 class = "btn btn-warning heading">Hand Gesture Guesser
+  <br>
+  <span class = "emoji_picture">&#9996;</span>
+  <span class = "emoji_picture">&#9994;</span>
+  <span class = "emoji_picture">&#128076;</span>
+</h3>
+      <br><br>
+
+      <p style="font-size: 22px;">Take picture of your hands
+      	<br>
+        <b style="color: yellow">Fists?</b>
+        <br>
+        <b style="color: black">Victory?</b>
+        <br>
+        <b style="color: red">Perfection?</b>
+        <br>
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label class  = "divtopper">Webcam -</label>
+<div id = "camera"></div>
+        <br><br>
+<button onclick = "takesnapshot()" class = "btn btn-success">Capture Image</button>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label style = "color: green">Prediction 1 -</label>
+        <p class = "emtionname" id = "result_emotion_name"></p>
+        <p class = "emoji" id = "updateemoji"> </p>
+        <label style = "color: green">Prediction 2 -</label>
+        <p class = "emtionname" id = "result_emotion_name2"></p>
+        <p class = "emoji" id = "updateemoji2"> </p>
+      </div>
+<div class = "col-md-4 col-sm-12 col-xs-12">
+      <label class  = "divtopper">Snapshot -</label>
+<div id = "result"></div>
+        <br><br>
+<button onclick = "check()" class = "btn btn-success">Predict Emotion</button>
+      </div>
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
